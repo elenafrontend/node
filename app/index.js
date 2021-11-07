@@ -1,8 +1,16 @@
-require('colors');
+// * 1
+/* 
+то же самое, что и 
+const userModuleExport = require('./user.js');
+const user = userModuleExport.user;
+*/
+// * const { user } = require('./user.js');
+// * user.sayHi(); // Hi! My name is Ann
 
-// Данный пакет по умолчанию работает за счет расширения String.prototype, 
-// поэтому нам не нужно записывать результат require('colors') в переменную, 
-// поскольку мы не используем его
+// * 2 и 3
+const user = require('./user.js');
+user.sayHi(); // Hi! My name is Ann
 
-const text = 'Helolo, Node.js'
-console.log(text.rainbow);
+// * примитив
+// const answer = require('./a.js');
+// console.log(answer); //42
